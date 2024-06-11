@@ -6,6 +6,24 @@ Download, ingest, parse, summarise, analyse NASDAQ ITCH data.
 "Nasdaq TotalView-ITCH — the standard Nasdaq data feed for serious traders — displays the full order book depth for Nasdaq market participants. TotalView also disseminates the Net Order Imbalance Indicator (NOII) for the Nasdaq Opening and Closing Crosses and Nasdaq IPO/Halt Cross."
 
 ### HFT Terminology:
+
+
+Order book: an electronic list of buy and sell orders for a specific security or financial instrument organized by price level. An order book lists the number of shares being bid on or offered at each price point, or market depth.
+
+Market depth: Market depth refers to the level of liquidity in a financial market. It indicates the purchase and sell orders volume for a particular asset at different prices. It aims to provide traders and investors with information about the supply and demand for specific support and the potential impact of their trades on the market.
+Market depth, also known as the Depth of Market (DOM), is a crucial concept in financial trading. It provides a detailed view of the supply and demand for a specific asset at various price levels. Here’s what you need to know:
+Market depth displays a list of pending orders for a security or currency.
+It shows both buy (bid) and sell (ask) orders, organized by price level.
+Traders use market depth data to understand the liquidity and order flow in the market.
+Key Components:
+Bid Orders: Represent the prices at which buyers are willing to purchase the asset.
+Ask Orders: Represent the prices at which sellers are willing to sell the asset.
+Order Size: Indicates the quantity of shares or contracts at each price level.
+Benefits:
+Informed Trading Decisions: Traders can gauge market sentiment by analyzing the number of orders at different price levels.
+Bid-Ask Spread: Market depth helps understand the spread between the highest bid and lowest ask prices.
+Volume Insights: It reveals how orders are distributed throughout the market.
+
 Co-Location
 Locating computers owned by HFT firms and proprietary traders in the same premises where an exchange’s computer servers are housed. This enables HFT firms to access stock prices a split second before the rest of the investing public. Co-location has become a lucrative business for exchanges, which charge HFT firms millions of dollars for the privilege of “low latency access.” 
 
