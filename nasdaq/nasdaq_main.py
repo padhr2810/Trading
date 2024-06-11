@@ -7,11 +7,15 @@ Download, ingest, parse, summarise NASDAQ data.
 """
 
 import warnings
-warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore')       
+        # warnings.filterwarnings(action='ignore') is one terrible thing to do, it may suppress ALL warnings. You should either specify message, module, or category explicitly to suppress ONLY a specific type of warnings that you'd REALLY like to do so
+        # Unlike exceptions, the process continues to run, even if a warning is issued.
 
 import gzip
-import shutil
-from struct import unpack
+import shutil       
+            # Shutil module offers high-level operation on a file like a copy, create, and remote operation on the file. It comes under Python’s standard utility modules. This module helps in automating the process of copying and removal of files and directories.
+from struct import unpack       # struct = supports fixed length structures, not variable length strings.
+                                # This module converts between Python values and C structs represented as Python bytes objects.
 from collections import namedtuple, Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urljoin
@@ -25,6 +29,7 @@ from matplotlib.ticker import FuncFormatter
 import seaborn as sns
 
 from nasdaq_download import may_be_download
+from nasdaq_download import show_progress
 from nasdaq_parse import format_time
 from nasdaq_parse import clean_message_types
 from nasdaq_summ import nasdaq_summ
@@ -40,9 +45,10 @@ We are now going to illustrates how to parse a sample file of ITCH messages and 
 
 The data is fairly large and running the entire example can take a lot of time and require substantial memory (16GB+). Also, the sample file used in this example may no longer be available because NASDAQ occasionaly updates the sample files.
 
+ITCH is the revolutionary Nasdaq outbound protocol.. i.e. data feed product.
 """
 
-data_path = Path('data') # set to e.g. external harddrive
+data_path = Path('data')        # set to e.g. external harddrive
 itch_store = str(data_path / 'itch.h5')
 order_book_store = data_path / 'order_book.h5'
 
