@@ -5,7 +5,7 @@ from urllib.request import urlretrieve
 
 
 
-def may_be_download(url):
+def may_be_download(url, data_path):
     """Download & unzip ITCH data if not yet available"""
     if not data_path.exists():
         print('Creating directory')

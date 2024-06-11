@@ -66,7 +66,7 @@ NASDAQ updates the files occasionally so that the SOURCE_FILE changes. If the ab
 
 
     
-file_name = may_be_download(urljoin(HTTPS_URL, SOURCE_FILE))
+file_name = may_be_download(urljoin(HTTPS_URL, SOURCE_FILE), data_path)
 date = file_name.name.split('.')[0]
 
 """
