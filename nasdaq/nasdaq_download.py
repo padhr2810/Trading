@@ -1,3 +1,6 @@
+"""
+Download the NASDAQ data.
+"""
 
 import gzip
 import shutil

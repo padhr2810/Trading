@@ -1,4 +1,6 @@
-
+"""
+Parse the NASDAQ data.
+"""
 
 def format_alpha(mtype, data):
     """Process byte strings of type alpha"""

@@ -1,4 +1,11 @@
 
+"""
+Download, ingest, parse, summarise NASDAQ data.
+
+# Jupyter Notebook: 01_parse_itch_order_flow_messages
+
+"""
+
 import warnings
 warnings.filterwarnings('ignore')
 
