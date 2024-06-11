@@ -7,7 +7,6 @@ import shutil
 from struct import unpack
 from collections import namedtuple, Counter, defaultdict
 from pathlib import Path
-from urllib.request import urlretrieve
 from urllib.parse import urljoin
 from datetime import timedelta
 from time import time
@@ -49,3 +48,27 @@ The HTTPS address, filename and corresponding date used in this example:
 HTTPS_URL = 'https://emi.nasdaq.com/ITCH/Nasdaq%20ITCH/'
 SOURCE_FILE = '10302019.NASDAQ_ITCH50.gz'
 
+"""
+#### URL updates
+
+NASDAQ updates the files occasionally so that the SOURCE_FILE changes. If the above gives an error, navigate to the HTTPS_URL using your browser, and check for new files. As of September 2021, the listed files include:
+
+- 01302020.NASDAQ_ITCH50.gz
+- 12302019.NASDAQ_ITCH50.gz
+- 10302019.NASDAQ_ITCH50.gz
+- 08302019.NASDAQ_ITCH50.gz
+- 07302019.NASDAQ_ITCH50.gz
+- 03272019.NASDAQ_ITCH50.gz
+- 01302019.NASDAQ_ITCH50.gz
+- 12282018.NASDAQ_ITCH50.gz
+
+"""
+
+from nasdaq_download import may_be_download
+
+    
+file_name = may_be_download(urljoin(HTTPS_URL, SOURCE_FILE))
+date = file_name.name.split('.')[0]
+
+
+    
